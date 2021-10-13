@@ -1,0 +1,31 @@
+description:
+  copy_paste_url: Copy and paste a URL.
+  min_length: Either use the predefined slug, or write your own (minimum of %MIN_SLUG_LENGTH% characters using alphanumericals, dashes and underscores).
+  link_warning: If this was not the link you expected to see, don't click on it.
+  links_to: 'You are about to leave this site. This short URL links to:'
+
+error:
+  min_length: The slug must contain at least %MIN_SLUG_LENGTH% characters.
+  unknown_error: An unknown error occurred. Try again later.
+  slug_invalid: The slug contains invalid characters. Only use alphanumericals, dashes, and underscores.
+  slug_already_in_use: The chosen slug is already in use. Please try another.
+  missing_url: The requested URL couldn't be located. Check the slug again or <a href="%TAG%">create a new short URL</a>.
+
+warning:
+  invalid_url: The URL might be invalid. Please verify it manually before submitting.
+
+message:
+  reused_slug: The URL you submitted already has a slug, which is being reused.
+
+form:
+  url: URL
+  slug: Slug
+  save: Save
+
+header:
+  create_short_url: Create a short URL
+  missing_url: URL not found
+  error: Error
+  warning: Warning
+  information: Information
+  goodbye: Good Bye

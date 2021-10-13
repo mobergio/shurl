@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'header.create_short_url'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'header.create_short_url'|trans }}</h1>
+    <p>
+    <ul>
+        <li>{% trans %}description.copy_paste_url{% endtrans %}</li>
+        <li>
+            {{ 'description.min_length'|trans({'%MIN_SLUG_LENGTH%':
+                constant('App\\Controller\\UrlItemController::MIN_SLUG_LENGTH')}) }}
+        </li>
+    </ul>
+    </p>
+
+    {{ include('url_item/_form.html.twig') }}
+
+    <div id="warning" class="alert alert-warning">
+        <strong>{{ 'header.warning'|trans }}</strong><br/>
+        {{ 'warning.invalid_url'|trans }}
+    </div>
+    {% if error %}
+        <div id="error" class="alert alert-danger">
+            <strong>{{ 'header.error'|trans }}</strong><br/>{{ error | trans({'%MIN_SLUG_LENGTH%':
+                constant('App\\Controller\\UrlItemController::MIN_SLUG_LENGTH')}) }}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            checkUrl();
+        }, false);
+
+        function checkUrl() {
+            const url = document.getElementById('url_item_url').value.trim();
+            const warning = document.getElementById('warning');
+            const matchedUrl = url.match(/^(https?|ftp):\/\/(-\.)?([^\s/?\.#-]+\.?)+(\/[^\s]*)?$/i);
+
+            if (url.length > 0 && !matchedUrl) {
+                warning.style.display = 'block';
+            } else {
+                warning.style.display = 'none';
+            }
+        }
+    </script>
+{% endblock %}

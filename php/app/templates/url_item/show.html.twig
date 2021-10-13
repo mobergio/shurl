@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ 'header.goodbye' | trans }}</h1>
+    {{ 'description.links_to' | trans }}
+    <a href="{{ url_item.url }}">{{ url_item.url }}</a>
+
+    <p>
+        {{ 'description.link_warning' | trans }}
+    </p>
+    {% if message %}
+        <div class="alert alert-info" role="alert">
+            <strong>{{ 'header.information'|trans }}</strong><br/>
+            {{ message|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

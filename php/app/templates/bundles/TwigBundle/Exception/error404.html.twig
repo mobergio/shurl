@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>{{ 'header.missing_url'|trans }}</h1>
+
+    <p>
+        {{ 'error.missing_url'|trans({'%TAG%': path('url_item_new') })|raw }}
+    </p>
+{% endblock %}
