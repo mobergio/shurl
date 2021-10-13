@@ -6,8 +6,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: changeme
-      MYSQL_DATABASE: weeurl
-      MYSQL_USER: weeurl
+      MYSQL_DATABASE: shurl
+      MYSQL_USER: shurl
       MYSQL_PASSWORD: changeme
     volumes:
       - ./db/:/var/lib/mysql/
