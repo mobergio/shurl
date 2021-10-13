@@ -15,8 +15,6 @@ services:
   php:
     build:
       context: ./php
-    ports:
-      - '9000:9000'
     volumes:
       - ./php/app/:/var/www/symfony_docker/
     depends_on:
