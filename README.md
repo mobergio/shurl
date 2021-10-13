@@ -3,7 +3,7 @@ ShURL is a simple short URL website. It allows visitors to create shorter and/or
 
 ## Softwares and dependencies
 This website runs inside docker containers. 
-The images used are [php](https://hub.docker.com/_/php), [nginx](https://hub.docker.com/_/nginx), and [mariadb](https://hub.docker.com/_/mariadb). The website uses the [Symfony 5.3](https://symfony.com/) framework.
+The images used are [php](https://hub.docker.com/_/php), [nginx](https://hub.docker.com/_/nginx), and [mariadb](https://hub.docker.com/_/mariadb). The website uses the [Symfony 5](https://symfony.com/) framework.
 
 Docker versions that have been used to run these containers are Docker Enginge v20.10.8 and Docker Compose v1.27.4. Earlier docker versions might work, but no guarantees are given.
 
