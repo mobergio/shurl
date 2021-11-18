@@ -68,4 +68,4 @@ After that run the `deploy.sh` script inside the php container.
 ```bash
 $ docker exec -ti shurl_php_1 sh deploy.sh
 ```
-The website should now run in production mode.
+The website should now run in production mode!
